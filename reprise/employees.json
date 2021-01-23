@@ -1,0 +1,52 @@
+{
+  "employees": [
+      {
+          "id": 1,
+          "firstName": "Sydnee",
+          "lastName": "Mela",
+          "loginID": 1234,
+          "address": "4228 beckerdite Road",
+          "state": "NC",
+          "zipcode": 27350,
+          "email": "sydneemela@gmail.com",
+          "phoneNumber": "3368611407",
+          "department": "Shipping",
+          "position": "Manager",
+          "wageRate": "15",
+          "active": "yes",
+          "admin": "1"
+      },
+      {
+          "id": 2,
+          "firstName": "Queen",
+          "lastName": "Bee",
+          "loginID": 5678,
+          "address": "4228 My House Road",
+          "state": "NC",
+          "zipcode": 64081,
+          "email": "queenbee@gmail.com",
+          "phoneNumber": "123456789",
+          "department": "Production",
+          "position": "Helper",
+          "wageRate": "12",
+          "active": "yes",
+          "admin": "0"
+      },
+      {
+          "id": 3,
+          "firstName": "Mr Moo",
+          "lastName": "Mongoose",
+          "loginID": 8910,
+          "address": "4228 Dragon Road",
+          "state": "FL",
+          "zipcode": 23408,
+          "email": "harper@gmail.com",
+          "phoneNumber": "123456789",
+          "department": "Shipping",
+          "position": "Wrapper",
+          "wageRate": "10",
+          "active": "yes",
+          "admin": "0"
+      }
+  ]
+}
