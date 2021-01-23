@@ -24,7 +24,7 @@
           id="lastname" type="text" placeholder="Last Name">
       </div>
       <div class="mb-6">
-        <label class="block text-white text-sm font-bold mb-2" for="lastName">
+        <label class="block text-white text-sm font-bold mb-2" for="email">
           Email
         </label>
         <input
@@ -55,14 +55,7 @@
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="phoneNumber" type="number" placeholder="Phone Number">
       </div>
-      <div class="mb-6">
-        <label class="block text-white text-sm font-bold mb-2" for="Position">
-          Position
-        </label>
-        <input
-          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="position" type="text" placeholder="Position">
-      </div>
+      <!-- department input -->
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="Department">
           Department
@@ -70,6 +63,23 @@
         <input
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="department" type="text" placeholder="Department">
+      </div>
+      <!-- department radio button -->
+      <div class="mb-6">
+        <p class="text-white text-1em font-bold mb-1">Department:</p>
+        <input type="radio" class="form-radio text-olive-400" id="department" name="department" value="1" checked>
+        <label class="text-white text-1em font-normal mb-1" for="shipping"> Shipping</label>
+        <br>
+        <input type="radio" class="form-radio text-olive-400" id="department" name="department" value="2">
+        <label class="text-white text-1em font-normal mb-2" for="production"> Production</label>
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="Position">
+          Position
+        </label>
+        <input
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="position" type="text" placeholder="Position">
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="WageRate">
@@ -98,7 +108,7 @@
       <div class="flex items-center justify-between">
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="button">
+          type="submit">
           ADD EMPLOYEE
         </button>
       </div>
