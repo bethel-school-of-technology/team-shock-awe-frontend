@@ -20,12 +20,16 @@
 <div id="ship-container" class="flex container mx-auto items-center justify-center">
     <div class="w-full max-w-xs">
         <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4">
-            <div *ngFor="let employee of listofemployees" class="flex items-center m-8 y-4 justify-between">
-                <button
+            <div *ngFor="let employee of listofemployees" flex items-center m-8 y-4 justify-between>
+                <div *ngIf="employee.department == 'Shipping'">
+                <a href="http://localhost:4200/login">
+                    <button
                     class="bg-olive-400 hover:bg-opacity-80 text-white font-bold m-4 p-2 rounded focus:outline-none focus:shadow-outline"
                     type="button">
                     <p>{{employee.firstName}} {{employee.lastName}}</p>
                 </button>
+           </a>
+            </div>
             </div>
         </form>
     </div>
