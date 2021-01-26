@@ -27,7 +27,7 @@ console.log(this.newEmployee)
 // created the employeeService function and then subscribed to my response
 this.myEmployeeService.registerEmployee(this.newEmployee).subscribe(myResponse => {
   console.log(myResponse);
-  this.router.navigate(["home"]);
+  this.router.navigate(["/profile"]);
 })
   }
 }

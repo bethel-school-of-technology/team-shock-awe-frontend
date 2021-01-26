@@ -7,7 +7,7 @@
 <div id="register-container" class="flex container mx-auto items-center justify-center">
     <div class="w-full max-w-xs">
         <!-- create the ngSubmit and call the add employee function that we made in the register ts file. -->
-        <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4" (ngSubmit)="addEmployee()">
+        <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4" (ngSubmit)="registerEmployee()">
           <!-- <img src="../../assets/logo.png" class="logo" /> -->
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="firstName">
@@ -41,7 +41,7 @@
                   Street Address
               </label>
               <input
-              [(ngModel)]= "newEmployee.address"
+              [(ngModel)]= "newEmployee.streetAddress"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   name="address" type="text" placeholder="Street Address">
           </div>

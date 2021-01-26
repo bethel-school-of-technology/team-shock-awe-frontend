@@ -61,6 +61,61 @@
       "position": "Manager",
       "wageRate": 13,
       "id": 4
+    },
+    {
+      "firstName": "Sydnee",
+      "lastName": "Mela",
+      "streetAddress": "4228 Beckerdite Road",
+      "state": "NC",
+      "zipCode": 27350,
+      "email": "sydneemela@gmail.com",
+      "phoneNumber": 8168063757,
+      "loginId": 4228,
+      "department": "production",
+      "position": "Manager",
+      "wageRate": 400,
+      "id": 5
+    },
+    {
+      "firstName": "Sydnee",
+      "lastName": "Mela",
+      "streetAddress": "4228 Beckerdite Road",
+      "state": "NC",
+      "zipCode": 27350,
+      "email": "sydneemela@gmail.com",
+      "phoneNumber": 8168063757,
+      "loginId": 4228,
+      "department": "production",
+      "position": "Manager",
+      "wageRate": 400,
+      "id": 6
+    },
+    {
+      "firstName": "Stephon",
+      "lastName": "Brown",
+      "loginId": 3642,
+      "streetAddress": "Home",
+      "state": "FL",
+      "zipCode": 34780,
+      "email": "guest@gmail.com",
+      "phoneNumber": 4123851967,
+      "department": "shipping",
+      "position": "Shipper",
+      "wageRate": 50,
+      "id": 7
+    },
+    {
+      "firstName": "Susan",
+      "lastName": "Mela",
+      "streetAddress": "510 NW Ashley Ave",
+      "state": "MO - Missouri",
+      "zipCode": 64081,
+      "phoneNumber": 8162170543,
+      "loginId": 4321,
+      "department": "production",
+      "position": "Developer",
+      "wageRate": 100,
+      "id": 8
     }
   ]
 }
