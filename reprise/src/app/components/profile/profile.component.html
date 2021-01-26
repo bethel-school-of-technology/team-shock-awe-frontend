@@ -30,10 +30,14 @@
           placeholder="Employee to Edit"
         />
       </div>
-      <div >
+      <div>
         <!-- to loop thrugh the employees and show on the screen -->
         <div *ngFor="let employee of listOfEmployees">
-          <p class="block text-white font-bold mb-2">{{ employee.firstName }} {{ employee.lastName }}</p>
+          <!-- <a routerLink="/profile/{{ employee.id }}"> -->
+            <p class="block text-white font-bold mb-2">
+              {{ employee.firstName }} {{ employee.lastName }}
+            </p>
+          <!-- </a> -->
         </div>
       </div>
       <div class="flex items-center justify-between">
