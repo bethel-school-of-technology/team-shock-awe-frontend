@@ -7,6 +7,8 @@ import { Employee } from '../models/employee';
 @Injectable({
   providedIn: 'root',
 })
+
+//May change to match the backend
 export class EmployeeService {
   myEmployeeURL: string = 'http://localhost:3000/employees';
 

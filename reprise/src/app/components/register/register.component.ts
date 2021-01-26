@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from 'src/app/models/employee';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms'
 
 
 @Component({
@@ -18,7 +19,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registerNew(){
+  registerNew(form: NgForm){
     this.myEmployeeService.registerEmployee(this.newEmployee).subscribe(response => {
       console.log(response);
       this.router.navigate(["home"]);
