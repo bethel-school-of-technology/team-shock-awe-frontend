@@ -7,6 +7,8 @@ import { Employee } from '../models/employee';
 @Injectable({
   providedIn: 'root',
 })
+
+//May change to match the backend
 export class EmployeeService {
   myEmployeeURL: string = 'http://localhost:3000/employees';
 
@@ -37,7 +39,9 @@ export class EmployeeService {
 
   // a way to create a new employee (CREATE)
   // component needs to provide new contact information
-  addEmployee(newEmployee: Employee): Observable<Employee> {
+
+  registerEmployee(newEmployee: Employee): Observable<Employee> {
+
     return this.http.post<Employee>(this.myEmployeeURL, newEmployee);
   }
 

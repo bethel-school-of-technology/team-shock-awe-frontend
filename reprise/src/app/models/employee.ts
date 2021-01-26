@@ -3,7 +3,7 @@ export class Employee {
   firstName: string;
   lastName: string;
   loginId: number;
-  address: string;
+  streetAddress: string;
   state: string;
   zipCode: number;
   email: string;
@@ -12,5 +12,6 @@ export class Employee {
   position: string;
   wageRate: string;
   active: string;
-  admin: string;
+  inactive: boolean;
+  admin: boolean;
 }
