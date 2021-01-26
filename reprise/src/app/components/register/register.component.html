@@ -5,81 +5,95 @@
 
 <!-- ADD EMPLOYEE FORM -->
 <div id="register-container" class="flex container mx-auto items-center justify-center">
-  <div class="w-full max-w-xs">
-      <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4" (submit)="registerNew(postForm)" #postForm="ngForm">
+    <div class="w-full max-w-xs">
+        <!-- create the ngSubmit and call the add employee function that we made in the register ts file. -->
+        <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4" (ngSubmit)="addEmployee()">
           <!-- <img src="../../assets/logo.png" class="logo" /> -->
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="firstName">
                   First Name
               </label>
               <input
+              [(ngModel)]= "newEmployee.firstName"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="firstname" type="text" placeholder="First Name">
+                  name="firstname" type="text" placeholder="First Name">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="lastName">
                   Last Name
               </label>
               <input
+              [(ngModel)]= "newEmployee.lastName"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="lastname" type="text" placeholder="Last Name">
+                  name="lastname" type="text" placeholder="Last Name">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="loginId">
                   Login ID
               </label>
               <input
+              [(ngModel)]= "newEmployee.loginId"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="loginId" type="number" placeholder="Login ID">
+                  name="loginId" type="number" placeholder="Login ID">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="address">
                   Street Address
               </label>
               <input
+              [(ngModel)]= "newEmployee.address"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="address" type="text" placeholder="Street Address">
+                  name="address" type="text" placeholder="Street Address">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="state">
                   State
               </label>
               <input
+              [(ngModel)]= "newEmployee.state"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="state" type="text" placeholder="State">
+                  name="state" type="text" placeholder="State">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="zipcode">
                   Zip Code
               </label>
               <input
+              [(ngModel)]= "newEmployee.zipCode"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="zipcode" type="number" placeholder="Zip Code">
+                  name="zipCode" type="number" placeholder="Zip Code">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="lastName">
                   Email
               </label>
               <input
+              [(ngModel)]= "newEmployee.email"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="email" type="email" placeholder="Email">
+                  name="email" type="email" placeholder="Email">
           </div>
           <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="phoneNumber">
                   Phone Number
               </label>
               <input
+              [(ngModel)]= "newEmployee.phoneNumber"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="phoneNumber" type="number" placeholder="Phone Number">
+                  name="phoneNumber" type="number" placeholder="Phone Number">
           </div>
           
           <div class="mb-6">
-              <p class="text-white text-1em font-bold mb-1">Department:</p>
+            <select name="department" [(ngModel)]="newEmployee.department"> 
+                <option value="shipping">Shipping</option> 
+                <option value="production">Production</option> 
+            </select>
+            
+              <!-- <p class="text-white text-1em font-bold mb-1">Department:</p>
               <input type="radio" class="form-radio text-olive-400" id="shipping" name="department" value="1" checked>
               <label class="text-white text-1em font-normal mb-1" for="shipping"> Shipping</label>
               <br>
               <input type="radio" class="form-radio text-olive-400" id="production" name="department" value="2">
-              <label class="text-white text-1em font-normal mb-2" for="production"> Production</label>
+              <label class="text-white text-1em font-normal mb-2" for="production"> Production</label> -->
             </div>
              <!-- <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="Department">
@@ -94,8 +108,9 @@
                   Position
               </label>
               <input
+              [(ngModel)]= "newEmployee.position"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="position" type="text" placeholder="Position">
+                  name="position" type="text" placeholder="Position">
           </div>
          
           <div class="mb-6">
@@ -103,16 +118,17 @@
                   Wage Rate
               </label>
               <input
+              [(ngModel)]= "newEmployee.wageRate"
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="wageRate" type="number" placeholder="Wage Rate">
+                  name="wageRate" type="number" placeholder="Wage Rate">
           </div>
             <div class="mb-6">
-              <p class="text-white text-1em font-bold mb-1">Admin:</p>
+              <!-- <p class="text-white text-1em font-bold mb-1">Admin:</p>
               <input type="radio" class="form-radio text-olive-400" id="yes" name="admin" value="1" checked>
               <label class="text-white text-1em font-normal mb-1" for="yes"> Yes</label>
               <br>
               <input type="radio" class="form-radio text-olive-400" id="no" name="admin" value="2">
-              <label class="text-white text-1em font-normal mb-2" for="no"> No</label>
+              <label class="text-white text-1em font-normal mb-2" for="no"> No</label> -->
             </div>
           <!-- <div class="mb-6">
               <label class="block text-white text-sm font-bold mb-2" for="password">
@@ -131,8 +147,10 @@
                   id="confirm-password" type="password" placeholder="******************">
           </div> -->
           <div class="flex items-center justify-between">
-              <button class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button">
+              <!-- change the button to a submit button to give info from the form -->
+              <button 
+                  class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="submit">
                   ADD EMPLOYEE
               </button>
           </div>
