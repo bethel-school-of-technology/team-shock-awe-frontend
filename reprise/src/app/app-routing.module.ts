@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ShipComponent } from './components/ship/ship.component';
 import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'ship', component: ShipComponent},
   { path: 'update', component: UpdateComponent},
   { path: 'admin-login', component: AdminLoginComponent},
+  { path: 'register-admin', component: RegisterAdminComponent}
 ];
 
 @NgModule({
