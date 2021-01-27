@@ -10,7 +10,7 @@
       "zipCode": 27350,
       "email": "sydneemela@gmail.com",
       "phoneNumber": "3368611407",
-      "department": "Shipping",
+      "department": "shipping",
       "position": "Manager",
       "wageRate": "15",
       "active": "true",
@@ -26,7 +26,7 @@
       "zipcode": 64081,
       "email": "queenbee@gmail.com",
       "phoneNumber": "123456789",
-      "department": "Production",
+      "department": "production",
       "position": "Helper",
       "wageRate": "12",
       "active": "true",
@@ -42,7 +42,7 @@
       "zipcode": 23408,
       "email": "harper@gmail.com",
       "phoneNumber": "123456789",
-      "department": "Shipping",
+      "department": "shipping",
       "position": "Wrapper",
       "wageRate": "10",
       "active": "true",
@@ -118,16 +118,60 @@
       "id": 8
     },
     {
-      "id": 9
+      "id": 9,
+      "firstName": "Bill",
+      "lastName": "Marley",
+      "department": "production"
     },
     {
-      "id": 10
+      "id": 10,
+      "firstName": "Jenna",
+      "lastName": "Homes",
+      "department": "shipping"
     },
     {
-      "id": 11
+      "id": 11,
+      "firstName": "Sherbert",
+      "lastName": "Ice Cream",
+      "department": "shipping"
     },
     {
-      "id": 12
+      "id": 12,
+      "firstName": "Finding",
+      "lastName": "Nemo",
+      "department": "production"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Bill",
+      "loginId": "4536",
+      "streetAddress": "1234 Address",
+      "state": "CO",
+      "zipCode": "45678",
+      "email": "billy@gmail.com",
+      "phoneNumber": "123456789",
+      "department": "shipping",
+      "wageRate": 15.5,
+      "id": 13
+    },
+    {
+      "loginId": "4536",
+      "streetAddress": "15798",
+      "state": "VA",
+      "zipCode": "52348",
+      "id": 14
+    },
+    {
+      "id": 15,
+      "firstName": "Buzz",
+      "lastName": "Lightyear",
+      "department": "production"
+    },
+    {
+      "id": 16,
+      "firstName": "Choc",
+      "lastName": "Ice Cream",
+      "department": "shipping"
     }
   ]
 }
