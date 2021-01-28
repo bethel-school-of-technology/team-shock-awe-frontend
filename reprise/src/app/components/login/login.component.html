@@ -1,39 +1,56 @@
-<div id="login-container" class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center">
-
+<div
+  id="login-container"
+  class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center"
+>
   <div>LOGIN</div>
 </div>
 
-<div id="login-container" class="flex container mx-auto items-center justify-center">
+<div
+  id="login-container"
+  class="flex container mx-auto items-center justify-center"
+>
   <div class="w-full max-w-xs">
-    <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4">
-      <div class="mb-6">
-        <label class="block text-white text-sm font-bold mb-2" for="userID">
+    <form class="bg-gray-700 shadow-none rounded px-2 pt-6 pb-8 mb-4">
+      <div class="px-6 mb-10">
+        <label class="text-white text-sm font-bold mb-2" for="userID">
+          USER ID
         </label>
         <input
-          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="firstname" type="text" placeholder="User ID">
+          class="border border-olive-400 rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="loginId"
+          name="loginId"
+          type="text"
+          placeholder="####"
+          maxlength="4"
+          size="4"
+        />
       </div>
-      <div class="flex items-center m-8 y-4 justify-between">
+      <!-- gave button id to try to create pop up -->
+      <div id="clockInButton" class="grid m-3 y-.5 mb-12">
         <button
-          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold m-4 p-2 rounded focus:outline-none focus:shadow-outline"
-          type="button">
+          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+        >
           Clock In!
         </button>
         <button
-          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold m-4 p-2 rounded focus:outline-none focus:shadow-outline"
-          type="button">
+          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+        >
           Clock Out!
         </button>
       </div>
-      <div class="flex items-center m-8 y-4 justify-between">
+      <div class="grid m-3 y-.5">
         <button
-          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold m-4 p-2 rounded focus:outline-none focus:shadow-outline"
-          type="button">
+          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+        >
           Meal Out!
         </button>
         <button
-          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold m-4 p-2 rounded focus:outline-none focus:shadow-outline"
-          type="button">
+          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+        >
           Meal In!
         </button>
       </div>
