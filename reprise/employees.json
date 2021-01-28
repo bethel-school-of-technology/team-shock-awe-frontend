@@ -172,6 +172,35 @@
       "firstName": "Choc",
       "lastName": "Ice Cream",
       "department": "shipping"
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "firstName": "Skippy",
+      "lastName": "Joy",
+      "streetAddress": "417 Sunny Lane",
+      "state": "MO",
+      "email": "guest@gmail.com",
+      "phoneNumber": "2323534565",
+      "department": "production",
+      "position": "Maker",
+      "wageRate": 27,
+      "active": "",
+      "inactive": false,
+      "admin": false,
+      "loginId": "2341",
+      "zipCode": "89088",
+      "id": 21
     }
   ]
 }

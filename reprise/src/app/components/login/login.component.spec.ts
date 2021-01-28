@@ -23,3 +23,12 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// tried adding a button function to make the pop up appear
+// var button = document.getElementById("clockInButton");
+
+// button.addEventListener("click", function(event) {
+//   console.log(event.target.innerHTML);
+// });
+
+
