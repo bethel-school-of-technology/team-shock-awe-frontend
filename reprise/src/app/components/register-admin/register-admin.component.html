@@ -1,0 +1,242 @@
+<div
+  id="register-admin-container"
+  class="flex container font-bold text-gray-700 text-5xl p-6 mx-auto items-center justify-center"
+>
+  <h3>ADD ADMIN</h3>
+</div>
+
+<!-- ADD EMPLOYEE FORM -->
+<div
+  id="register-admin-container"
+  class="flex container mx-auto items-center justify-center"
+>
+  <div class="w-full max-w-xs">
+    <!-- create the ngSubmit and call the add employee function that we made in the register ts file. -->
+    <form
+      class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4"
+      (ngSubmit)="registerAdmin()"
+    >
+      <!-- <img src="../../assets/logo.png" class="logo" /> -->
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="firstName">
+          First Name
+        </label>
+        <input
+          [(ngModel)]="newAdmin.firstName"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="firstname"
+          type="text"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="lastName">
+          Last Name
+        </label>
+        <input
+          [(ngModel)]="newAmin.lastName"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="lastname"
+          type="text"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="loginId">
+          Login ID
+        </label>
+        <input
+          [(ngModel)]="newAdmin.loginId"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="loginId"
+          type="text"
+          placeholder="Login ID"
+          min="0000"
+          maxlength="4"
+          size="4"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="address">
+          Street Address
+        </label>
+        <input
+          [(ngModel)]="newAdmin.streetAddress"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="address"
+          type="text"
+          placeholder="Street Address"
+        />
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="state">
+          State
+        </label>
+        <input
+          [(ngModel)]="newAdmin.state"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="state"
+          type="text"
+          placeholder="State"
+        />
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="zipcode">
+          Zip Code
+        </label>
+        <input
+          [(ngModel)]="newAdmin.zipCode"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="zipCode"
+          type="text"
+          placeholder="Zip Code"
+          min="00000"
+          maxlength="5"
+          size="5"
+        />
+      </div>
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="lastName">
+          Email
+        </label>
+        <input
+          [(ngModel)]="newAdmin.email"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="email"
+          type="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="mb-6">
+        <label
+          class="block text-white text-sm font-bold mb-2"
+          for="phoneNumber"
+        >
+          Phone Number
+        </label>
+        <input
+          [(ngModel)]="newAdmin.phoneNumber"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="phoneNumber"
+          type="tel"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="Phone Number"
+          maxlength="10"
+          size="10"
+        />
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="department">
+          Department
+        </label>
+        <select
+          class="dropdown shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="department"
+          [(ngModel)]="newAdmin.department"
+          required
+        >
+        <span class="mr-1">Dropdown</span>
+          <option class="bg-gray-700 text-grey-200 font-semibold py-2 px-4 rounded inline-flex items-center" value="shipping">Shipping</option>
+          <option value="production">Production</option>
+        </select>
+      </div>
+
+      <!-- trying out different drop menu edited code -->
+      <!-- <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="department">
+            Department
+          </label>
+        <div class="block dropdown inline-block relative">
+          <button class="dropdown shadow appearance-none bg-white border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <span class="mr-1 text-gray-400">Select Department</span>
+             </button>
+          <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+            <li class="rounded-t bg-gray-200 hover:bg-olive-400 py-2 px-4 block whitespace-no-wrap" value="shipping">Shipping</li>
+            <li class="bg-gray-200 hover:bg-olive-400 py-2 px-4 block whitespace-no-wrap" value="production">Production</li>
+            </ul>
+        </div> -->
+      
+     
+      <!-- <p class="text-white text-1em font-bold mb-1">Department:</p>
+              <input type="radio" class="form-radio text-olive-400" id="shipping" name="department" value="1" checked>
+              <label class="text-white text-1em font-normal mb-1" for="shipping"> Shipping</label>
+              <br>
+              <input type="radio" class="form-radio text-olive-400" id="production" name="department" value="2">
+              <label class="text-white text-1em font-normal mb-2" for="production"> Production</label> -->
+
+      <!-- <div class="mb-6">
+              <label class="block text-white text-sm font-bold mb-2" for="Department">
+                  Department
+              </label>
+              <input
+                  class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="department" type="text" placeholder="Department">
+          </div> -->
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="Position">
+          Position
+        </label>
+        <input
+          [(ngModel)]="newAdmin.position"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="position"
+          type="text"
+          placeholder="Position"
+          required
+        />
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-white text-sm font-bold mb-2" for="WageRate">
+          Wage Rate
+        </label>
+        <input
+          [(ngModel)]="newAdmin.wageRate"
+          class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="wageRate"
+          type="number"
+          placeholder="Wage Rate"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <!-- <p class="text-white text-1em font-bold mb-1">Admin:</p>
+              <input type="radio" class="form-radio text-olive-400" id="yes" name="admin" value="1" checked>
+              <label class="text-white text-1em font-normal mb-1" for="yes"> Yes</label>
+              <br>
+              <input type="radio" class="form-radio text-olive-400" id="no" name="admin" value="2">
+              <label class="text-white text-1em font-normal mb-2" for="no"> No</label> -->
+      </div>
+      <!-- <div class="mb-6">
+              <label class="block text-white text-sm font-bold mb-2" for="password">
+                  Password
+              </label>
+              <input
+                  class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="password" type="password" placeholder="******************">
+          </div> -->
+      <!-- <div class="mb-6">
+              <label class="block text-white text-sm font-bold mb-2" for="confirm-password">
+                  Confirm Password
+              </label>
+              <input
+                  class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="confirm-password" type="password" placeholder="******************">
+          </div> -->
+      <div class="flex items-center justify-between">
+        <!-- change the button to a submit button to give info from the form -->
+        <button
+          class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          ADD ADMIN
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+

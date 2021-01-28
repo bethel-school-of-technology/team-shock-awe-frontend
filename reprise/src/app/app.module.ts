@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
     RegisterComponent,
     UpdateComponent,
     AdminLoginComponent,
+    RegisterAdminComponent,
   ],
   imports: [
     BrowserModule,
