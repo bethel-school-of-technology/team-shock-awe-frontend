@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
   // creating the response to add employee service function
   registerEmployee() {
     console.log('testing');
@@ -35,7 +36,9 @@ export class RegisterComponent implements OnInit {
         });
     }
   }
-  validateForm(emp: Employee) { 
+
+  // requiring the form to be filled out before submitting
+  validateForm(emp: Employee) {
     if (emp.firstName.length === 0 || emp.firstName === null) {
       alert('First Name Cannot Be Empty');
       return false;
