@@ -21,7 +21,7 @@
           </button>
         </a>
       </div>
-      <div class="mt-6 mb-6">
+      <!-- <div class="mt-6 mb-6">
         <label class="block text-white text-sm font-bold mb-2"> </label>
         <input
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -30,20 +30,34 @@
           placeholder="Employee to Edit"
         />
       </div>
-      <div>
-        <!-- to loop thrugh the employees and show on the screen -->
-        <div *ngFor="let employee of listOfEmployees">
-          <!-- <a routerLink="/profile/{{ employee.id }}"> -->
+      <div> -->
+                        <!-- to loop thrugh the employees and show on the screen -->
+        <!-- <div *ngFor="let employee of listOfEmployees">
+          <a routerLink="/profile/{{ employee.id }}">
             <p class="block text-white font-bold mb-2">
               {{ employee.firstName }} {{ employee.lastName }}
             </p>
-          <!-- </a> -->
+          </a>
         </div>
-      </div>
+      </div> -->
+
+<!-- edit employee list -->
+<div>
+  <select
+  class="dropdown shadow appearance-none border border-olive-400 rounded w-full mb-6 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+  name="select employee" 
+  >
+  
+<span class="mr-2">Active Employees</span>
+  <option class="bg-gray-700 text-grey-200 font-semibold py-2 px-4 rounded inline-flex items-center" value="employee.id" *ngFor="let employee of listOfEmployees">{{employee.firstName}} {{employee.lastName}}</option>
+</select>
+</div>
+
+
       <div class="flex items-center justify-between">
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="button"
+          type="submit" routerLink="/update/:loginID"
         >
           EDIT EMPLOYEE
         </button>

@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'ship', component: ShipComponent},
-  { path: 'update', component: UpdateComponent},
+  { path: 'update/:id', component: UpdateComponent},
   { path: 'admin-login', component: AdminLoginComponent},
   { path: 'register-admin', component: RegisterAdminComponent}
 ];

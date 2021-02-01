@@ -15,7 +15,7 @@ export class EmployeeService {
   // add this http client in the brakets and creates an import
   constructor(private http: HttpClient) {}
 
-  // what are the tasks that I need to complete
+  // now I lists all the tasks that I need to complete
 
   //a way to list all employees (READ)
   getAllEmployees(): Observable<Employee[]> {
