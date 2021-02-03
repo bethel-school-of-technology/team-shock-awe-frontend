@@ -3,7 +3,7 @@
   class="flex container font-bold text-gray-700 text-5xl p-6 mx-auto items-center justify-center"
 >
   <h3>UPDATE EMPLOYEE</h3>
-  
+  <br>
   <h5>{{ editEmployee.firstName }} {{ editEmployee.lastName }}</h5>
 </div>
 
@@ -17,7 +17,8 @@
     <!-- ****update the ngSubmit and call the add employee function that we made to edit the employee ts file. -->
     <form
       class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4"
-      (ngSubmit)="updateEmployee()"
+      (ngSubmit)="updateEmployee(myForm)"
+      #myForm='ngForm'
     >
       <!-- <img src="../../assets/logo.png" class="logo" /> -->
       <div class="mb-6">
@@ -232,7 +233,7 @@
                   class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="confirm-password" type="password" placeholder="******************">
           </div> -->
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between"> 
         <!-- change the button to a submit button to give info from the form -->
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
