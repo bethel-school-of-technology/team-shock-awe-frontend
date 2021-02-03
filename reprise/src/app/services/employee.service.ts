@@ -15,7 +15,7 @@ export class EmployeeService {
   // add this http client in the brakets and creates an import
   constructor(private http: HttpClient) {}
 
-  // what are the tasks that I need to complete
+  // now I lists all the tasks that I need to complete
 
   //a way to list all employees (READ)
   getAllEmployees(): Observable<Employee[]> {
@@ -25,16 +25,14 @@ export class EmployeeService {
   //a way to list one employee (READ)
   // component needs to send an ID for the employee
   getOneEmployee(reqID: number): Observable<Employee> {
-    return this.http.get<Employee>('${this.myEmployeeURL}/${regID}');
+    return this.http.get<Employee>(this.myEmployeeURL + '/' + reqID);
   }
 
   // a way to edit an employee (UPDATE)
   // component needs to provide the ID as well as the updated employee info
-  updateEmployee(editID: number, edittedInfo: Employee): Observable<Employee> {
-    return this.http.put<Employee>(
-      '${this.myEmployeeURL}/${editID}',
-      edittedInfo
-    );
+  updateEmployee(edittedInfo: Employee): Observable<Employee> {
+    console.log(edittedInfo);
+    return this.http.put<Employee>(this.myEmployeeURL + '/' + edittedInfo.id, edittedInfo);
   }
 
   // a way to create a new employee (CREATE)
