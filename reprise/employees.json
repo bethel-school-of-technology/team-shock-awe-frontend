@@ -2,7 +2,7 @@
   "employees": [
     {
       "id": 1,
-      "firstName": "Sydnee",
+      "firstName": "Kelli",
       "lastName": "Mela",
       "loginId": 1234,
       "address": "4228 beckerdite Road",
@@ -201,6 +201,23 @@
       "loginId": "2341",
       "zipCode": "89088",
       "id": 21
+    },
+    {
+      "firstName": "Oh",
+      "lastName": "Wow",
+      "streetAddress": "453jklsdjf",
+      "state": "Ca",
+      "email": "me@gmail.com",
+      "phoneNumber": "4565671234",
+      "department": "production",
+      "position": "Producer",
+      "wageRate": 50,
+      "active": "",
+      "inactive": false,
+      "admin": false,
+      "loginId": "7890",
+      "zipCode": "98954",
+      "id": 22
     }
   ]
 }
