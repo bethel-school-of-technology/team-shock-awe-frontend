@@ -11,6 +11,7 @@ import { Employee } from '../models/employee';
 //May change to match the backend
 export class EmployeeService {
   myEmployeeURL: string = 'http://localhost:3000/employees';
+  backendEmployeeURL: string = 'http://localhost:5000/api/employees';
 
   // add this http client in the brakets and creates an import
   constructor(private http: HttpClient) {}
@@ -46,6 +47,14 @@ export class EmployeeService {
   // a way to delete employees (DELETE)
   // component needs to pull an ID
   deleteEmployee(deleteID: number): Observable<any> {
-    return this.http.delete<any>('${this.myEmployeeURL}/${deleteID}');
+    return this.http.delete<any>(`${this.myEmployeeURL}/${deleteID}`);
   }
+
+  clockIn(loginId: string): Observable<any>{
+return this.http.post<any>(`${this.backendEmployeeURL}/clockin`, {loginId});
+  }
+
+  clockOut(loginId: string): Observable<any>{
+    return this.http.post<any>(`${this.backendEmployeeURL}/clockout`, {loginId});
+      }
 }
