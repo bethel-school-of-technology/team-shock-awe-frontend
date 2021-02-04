@@ -2,8 +2,8 @@
   "employees": [
     {
       "id": 1,
-      "firstName": "Kelli",
-      "lastName": "Mela",
+      "firstName": "Fisher",
+      "lastName": "Price",
       "loginId": 1234,
       "address": "4228 beckerdite Road",
       "state": "NC",
@@ -14,7 +14,8 @@
       "position": "Manager",
       "wageRate": "15",
       "active": "true",
-      "admin": "true"
+      "admin": "true",
+      "streetAddress": "1234 Forrest Ave"
     },
     {
       "id": 2,
@@ -49,8 +50,8 @@
       "admin": "false"
     },
     {
-      "firstName": "Sydnee",
-      "lastName": "Mela",
+      "firstName": "Super",
+      "lastName": "Woman",
       "address": "4228 Beckerdite Road",
       "state": "NC",
       "zipCode": 27350,
@@ -63,8 +64,8 @@
       "id": 4
     },
     {
-      "firstName": "Sydnee",
-      "lastName": "Mela",
+      "firstName": "Final",
+      "lastName": "Straw",
       "streetAddress": "4228 Beckerdite Road",
       "state": "NC",
       "zipCode": 27350,
@@ -77,22 +78,22 @@
       "id": 5
     },
     {
-      "firstName": "Sydnee",
-      "lastName": "Mela",
-      "streetAddress": "4228 Beckerdite Road",
-      "state": "NC",
-      "zipCode": 27350,
-      "email": "sydneemela@gmail.com",
-      "phoneNumber": 8168063757,
-      "loginId": 4228,
+      "firstName": "Buzz",
+      "lastName": "Lightyear",
+      "streetAddress": "Milikan Farms Road",
+      "state": "MI",
+      "zipCode": "23847",
+      "email": "findme@gmail.com",
+      "phoneNumber": "9845793487",
+      "loginId": "9879",
       "department": "production",
-      "position": "Manager",
-      "wageRate": 400,
+      "position": "Helper",
+      "wageRate": 100,
       "id": 6
     },
     {
-      "firstName": "Stephon",
-      "lastName": "Brown",
+      "firstName": "Finding",
+      "lastName": "Nemo",
       "loginId": 3642,
       "streetAddress": "Home",
       "state": "FL",
@@ -106,7 +107,7 @@
     },
     {
       "firstName": "Susan",
-      "lastName": "Mela",
+      "lastName": "B",
       "streetAddress": "510 NW Ashley Ave",
       "state": "MO - Missouri",
       "zipCode": 64081,
@@ -125,9 +126,17 @@
     },
     {
       "id": 10,
-      "firstName": "Jenna",
-      "lastName": "Homes",
-      "department": "shipping"
+      "firstName": "Space",
+      "lastName": "Cadet",
+      "department": "shipping",
+      "loginId": "5645",
+      "streetAddress": "First in Flight",
+      "state": "NH",
+      "zipCode": "45987",
+      "email": "quest@gmail.com",
+      "phoneNumber": "9874958793",
+      "position": "Shipper",
+      "wageRate": 10
     },
     {
       "id": 11,
@@ -136,88 +145,21 @@
       "department": "shipping"
     },
     {
-      "id": 12,
-      "firstName": "Finding",
-      "lastName": "Nemo",
-      "department": "production"
-    },
-    {
-      "firstName": "Joe",
-      "lastName": "Bill",
-      "loginId": "4536",
-      "streetAddress": "1234 Address",
-      "state": "CO",
-      "zipCode": "45678",
-      "email": "billy@gmail.com",
-      "phoneNumber": "123456789",
-      "department": "shipping",
-      "wageRate": 15.5,
-      "id": 13
-    },
-    {
-      "loginId": "4536",
-      "streetAddress": "15798",
-      "state": "VA",
-      "zipCode": "52348",
-      "id": 14
-    },
-    {
-      "id": 15,
-      "firstName": "Buzz",
-      "lastName": "Lightyear",
-      "department": "production"
-    },
-    {
-      "id": 16,
-      "firstName": "Choc",
-      "lastName": "Ice Cream",
-      "department": "shipping"
-    },
-    {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
-    },
-    {
-      "id": 20
-    },
-    {
-      "firstName": "Skippy",
-      "lastName": "Joy",
-      "streetAddress": "417 Sunny Lane",
-      "state": "MO",
-      "email": "guest@gmail.com",
-      "phoneNumber": "2323534565",
+      "firstName": "Larry",
+      "lastName": "James",
+      "streetAddress": "5467 Strawberry Lane",
+      "state": "NV",
+      "email": "forrest@trees.com",
+      "phoneNumber": "3498573948",
       "department": "production",
       "position": "Maker",
-      "wageRate": 27,
+      "wageRate": 15,
       "active": "",
       "inactive": false,
       "admin": false,
-      "loginId": "2341",
-      "zipCode": "89088",
-      "id": 21
-    },
-    {
-      "firstName": "Oh",
-      "lastName": "Wow",
-      "streetAddress": "453jklsdjf",
-      "state": "Ca",
-      "email": "me@gmail.com",
-      "phoneNumber": "4565671234",
-      "department": "production",
-      "position": "Producer",
-      "wageRate": 50,
-      "active": "",
-      "inactive": false,
-      "admin": false,
-      "loginId": "7890",
-      "zipCode": "98954",
-      "id": 22
+      "loginId": "9879",
+      "zipCode": "98798",
+      "id": 12
     }
   ]
 }

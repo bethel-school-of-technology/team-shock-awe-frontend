@@ -23,19 +23,20 @@
           placeholder="####"
           maxlength="4"
           size="4"
+          [(ngModel)]="loginId"
         />
       </div>
       <!-- gave button id to try to create pop up -->
       <div id="clockInButton" class="grid m-3 y-.5 mb-12">
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
-          type="button"
+          type="button" (click)="clockIn()"
         >
           Clock In!
         </button>
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
-          type="button"
+          type="button" (click)="clockOut()"
         >
           Clock Out!
         </button>
