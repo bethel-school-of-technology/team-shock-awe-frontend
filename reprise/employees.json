@@ -127,7 +127,7 @@
     {
       "id": 10,
       "firstName": "Space",
-      "lastName": "Cadet",
+      "lastName": "Cadet Jr",
       "department": "shipping",
       "loginId": "5645",
       "streetAddress": "First in Flight",
@@ -160,6 +160,23 @@
       "loginId": "9879",
       "zipCode": "98798",
       "id": 12
+    },
+    {
+      "firstName": "Swimming",
+      "lastName": "Swimming",
+      "streetAddress": "Ocean way",
+      "state": "Ca",
+      "email": "ocean@gmail.com",
+      "phoneNumber": "0009998888",
+      "department": "production",
+      "position": "Product",
+      "wageRate": 30,
+      "active": "",
+      "inactive": false,
+      "admin": false,
+      "loginId": "5555",
+      "zipCode": "99999",
+      "id": 13
     }
   ]
 }

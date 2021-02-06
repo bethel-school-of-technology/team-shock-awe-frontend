@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Production</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Production</title>
+</head>
+
+<body></body>
+
 </html>
 
-<div
-  id="production-container"
-  class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center"
->
+<div id="production-container"
+  class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center">
   PRODUCTION DEPARTMENT
 </div>
 
-<div
-  id="prod-container"
-  class="flex container mx-auto items-center justify-center"
->
+<div id="prod-container" class="flex container mx-auto items-center justify-center">
   <div class="w-full max-w-xs">
     <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4">
-      <div
-        *ngFor="let employee of listofemployees"
-      >
+      <div *ngFor="let employee of listofemployees">
         <div *ngIf="employee.department == 'production'">
-          <a href="http://localhost:4200/login">
+          <a routerLink="/login">
             <button
               class="grid mb-2 bg-olive-400 hover:bg-opacity-80 text-white font-bold m-4 p-2 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
+              type="button">
               <p>{{ employee.firstName }} {{ employee.lastName }}</p>
             </button>
           </a>

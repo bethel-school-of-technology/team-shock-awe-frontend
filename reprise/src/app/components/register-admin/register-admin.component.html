@@ -1,94 +1,63 @@
-<div
-  id="register-admin-container"
-  class="flex container font-bold text-gray-700 text-5xl p-6 mx-auto items-center justify-center"
->
+<div id="register-admin-container"
+  class="flex container font-bold text-gray-700 text-5xl p-6 mx-auto items-center justify-center">
   <h3>ADD ADMIN</h3>
 </div>
 
 <!-- ADD ADMIN FORM -->
-<div
-  id="register-admin-container"
-  class="flex container mx-auto items-center justify-center"
->
+<div id="register-admin-container" class="flex container mx-auto items-center justify-center">
   <div class="w-full max-w-xs">
     <!-- create the ngSubmit and call the add employee function that we made in the register ts file. -->
-    <form
-      class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4"
-      (ngSubmit)="registerAdmin()"
-    >
+    <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4" (ngSubmit)="registerAdmin()">
 
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="firstName">
           First Name
         </label>
-        <input
-          [(ngModel)]="newAdmin.firstName"
+        <input [(ngModel)]="newAdmin.firstName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="firstname"
-          type="text"
-          placeholder="First Name"
-          required
-        />
+          name="firstname" type="text" placeholder="First Name" required />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="lastName">
           Last Name
         </label>
-        <input
-          [(ngModel)]="newAdmin.lastName"
+        <input [(ngModel)]="newAdmin.lastName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="lastname"
-          type="text"
-          placeholder="Last Name"
-        />
+          name="lastname" type="text" placeholder="Last Name" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="email">
           Email
         </label>
-        <input
-          [(ngModel)]="newAdmin.email"
+        <input [(ngModel)]="newAdmin.email"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="email"
-          type="email"
-          placeholder="Email"
-        />
+          name="email" type="email" placeholder="Email" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="userName">
           UserName
         </label>
-        <input
-          [(ngModel)]="newAdmin.userName"
+        <input [(ngModel)]="newAdmin.userName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="userName"
-          type="text"
-          placeholder="User Name"
-        />
+          name="userName" type="text" placeholder="User Name" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="password">
           Password
         </label>
-        <input
-          [(ngModel)]="newAdmin.password"
+        <input [(ngModel)]="newAdmin.password"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="password"
-          type="text"
-          placeholder="************"
-        />
+          name="password" type="text" placeholder="************" />
       </div>
 
       <div class="flex items-center justify-between">
         <!-- change the button to a submit button to give info from the form -->
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="submit"
-        >
+          type="submit">
           ADD ADMIN
         </button>
       </div>
     </form>
   </div>
 </div>
-
