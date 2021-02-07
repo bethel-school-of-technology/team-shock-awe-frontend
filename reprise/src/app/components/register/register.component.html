@@ -1,133 +1,80 @@
-<div
-  id="register-container"
-  class="flex container font-bold text-gray-700 text-5xl p-6 mx-auto items-center justify-center"
->
+<div id="register-container"
+  class="flex container font-bold text-gray-700 text-5xl p-6 mx-auto items-center justify-center">
   <h3>ADD EMPLOYEE</h3>
 </div>
 
 <!-- ADD EMPLOYEE FORM -->
-<div
-  id="register-container"
-  class="flex container mx-auto items-center justify-center"
->
+<div id="register-container" class="flex container mx-auto items-center justify-center">
   <div class="w-full max-w-xs">
-    
+
     <!-- ****create the ngSubmit and call the add employee function that we made in the register ts file. -->
-    <form
-      class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4"
-      (ngSubmit)="registerEmployee()"
-    >
+    <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4" (ngSubmit)="registerEmployee()">
+      
       <!-- <img src="../../assets/logo.png" class="logo" /> -->
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="firstName">
           First Name <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.firstName"
+        <input [(ngModel)]="newEmployee.firstName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="firstname"
-          type="text"
-          placeholder="First Name"
-          required
-        />
+          name="firstname" type="text" placeholder="First Name" required />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="lastName">
           Last Name <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.lastName"
+        <input [(ngModel)]="newEmployee.lastName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="lastname"
-          type="text"
-          placeholder="Last Name"
-          required
-        />
+          name="lastname" type="text" placeholder="Last Name" required />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="loginId">
           Login ID <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.loginId"
+        <input [(ngModel)]="newEmployee.loginId"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="loginId"
-          type="text"
-          placeholder="Login ID"
-          min="0000"
-          maxlength="4"
-          size="4"
-        />
+          name="loginId" type="text" placeholder="Login ID" min="0000" maxlength="4" size="4" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="address">
           Street Address <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.streetAddress"
+        <input [(ngModel)]="newEmployee.streetAddress"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="address"
-          type="text"
-          placeholder="Street Address"
-        />
+          name="address" type="text" placeholder="Street Address" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="state">
           State <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.state"
+        <input [(ngModel)]="newEmployee.state"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="state"
-          type="text"
-          placeholder="State"
-        />
+          name="state" type="text" placeholder="State" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="zipcode">
           Zip Code <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.zipCode"
+        <input [(ngModel)]="newEmployee.zipCode"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="zipCode"
-          type="text"
-          placeholder="Zip Code"
-          min="00000"
-          maxlength="5"
-          size="5"
-        />
+          name="zipCode" type="text" placeholder="Zip Code" min="00000" maxlength="5" size="5" />
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="lastName">
           Email <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.email"
+        <input [(ngModel)]="newEmployee.email"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="email"
-          type="email"
-          placeholder="Email"
-          required
-        />
+          name="email" type="email" placeholder="Email" required />
       </div>
       <div class="mb-6">
-        <label
-          class="block text-white text-sm font-bold mb-2"
-          for="phoneNumber"
-        >
+        <label class="block text-white text-sm font-bold mb-2" for="phoneNumber">
           Phone Number <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.phoneNumber"
+        <input [(ngModel)]="newEmployee.phoneNumber"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="phoneNumber"
-          type="tel"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          placeholder="Phone Number"
-          maxlength="10"
-          size="10"
-        />
+          name="phoneNumber" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" maxlength="10"
+          size="10" />
       </div>
 
       <div class="mb-6">
@@ -136,14 +83,14 @@
         </label>
         <select
           class="dropdown shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="department"
-          [(ngModel)]="newEmployee.department">
-          
-        <span class="mr-2">Dropdown</span>
-          <option class="bg-gray-700 text-grey-200 font-semibold py-2 px-4 rounded inline-flex items-center" value="shipping">Shipping</option>
+          name="department" [(ngModel)]="newEmployee.department">
+
+          <span class="mr-2">Dropdown</span>
+          <option class="bg-gray-700 text-grey-200 font-semibold py-2 px-4 rounded inline-flex items-center"
+            value="shipping">Shipping</option>
           <option value="production">Production</option>
         </select>
-        
+
       </div>
 
       <!-- trying out different drop menu edited code -->
@@ -160,8 +107,8 @@
             <li class="bg-gray-200 hover:bg-olive-400 py-2 px-4 block whitespace-no-wrap" value="production">Production</li>
             </ul>
         </div> -->
-      
-     
+
+
       <!-- <p class="text-white text-1em font-bold mb-1">Department:</p>
               <input type="radio" class="form-radio text-olive-400" id="shipping" name="department" value="1" checked>
               <label class="text-white text-1em font-normal mb-1" for="shipping"> Shipping</label>
@@ -181,30 +128,20 @@
         <label class="block text-white text-sm font-bold mb-2" for="Position">
           Position<span style="color:#a53333"> *</span>
         </label>
-        
-        <input
-          [(ngModel)]="newEmployee.position"
+
+        <input [(ngModel)]="newEmployee.position"
           class="required shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="position"
-          type="text"
-          placeholder="Position"
-          required
-        />
-        
+          name="position" type="text" placeholder="Position" required />
+
       </div>
 
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="WageRate">
           Wage Rate <span style="color:#a53333"> *</span>
         </label>
-        <input
-          [(ngModel)]="newEmployee.wageRate" 
+        <input [(ngModel)]="newEmployee.wageRate"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="wageRate"
-          type="number"
-          placeholder="Wage Rate"
-          required
-        />
+          name="wageRate" type="number" placeholder="Wage Rate" required />
       </div>
       <div class="mb-6">
         <!-- <p class="text-white text-1em font-bold mb-1">Admin:</p>
@@ -234,8 +171,7 @@
         <!-- change the button to a submit button to give info from the form -->
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="submit"
-        >
+          type="submit">
           ADD EMPLOYEE
         </button>
       </div>

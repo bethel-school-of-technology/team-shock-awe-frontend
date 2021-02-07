@@ -2,7 +2,7 @@ export class Employee {
   id: number;
   firstName: string =""; 
   lastName: string ="";
-  loginId: number;
+  loginId: string;
   streetAddress: string ="";
   state: string ="";
   zipCode: number;
