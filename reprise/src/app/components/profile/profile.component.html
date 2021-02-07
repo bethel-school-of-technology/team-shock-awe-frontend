@@ -1,23 +1,50 @@
-<div id="profile-container"
-  class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center">
+<div
+  id="profile-container"
+  class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center"
+>
   ADMIN PAGE
 </div>
 
-<div id="profile-container" class="flex container mx-auto items-center justify-center">
+<div
+  id="profile-container"
+  class="flex container mx-auto items-center justify-center"
+>
   <div class="w-full max-w-xs">
-    <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-6 mb-2">
+    <form class="bg-gray-700 shadow-none rounded px-4 pt-4 pb-4 mb-2">
       <div class="mb-6">
-        <h1 class="text-white font-semibold text-xl mt-2 mb-3">ADD NEW EMPLOYEES</h1>
+        <h1 class="text-white font-semibold text-xl mt-2 mb-3">
+          ADD NEW EMPLOYEE
+        </h1>
         <a routerLink="../register">
           <button
             class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button">
+            type="button"
+          >
             ADD EMPLOYEE
           </button>
         </a>
       </div>
-      <hr>
-      <!-- <div class="mt-6 mb-6">
+
+      <hr />
+
+      <div class="mb-6">
+        <h1 class="text-white font-semibold text-xl mt-2 mb-3">
+          ADD NEW ADMIN
+        </h1>
+        <a routerLink="../register-admin">
+          <button
+            class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+          >
+            ADD ADMIN
+          </button>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="mt-6 mb-6">
         <label class="block text-white text-sm font-bold mb-2"> </label>
         <input
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -27,8 +54,8 @@
         />
       </div>
       <div> -->
-      <!-- to loop thrugh the employees and show on the screen -->
-      <!-- <div *ngFor="let employee of listOfEmployees">
+<!-- to loop thrugh the employees and show on the screen -->
+<!-- <div *ngFor="let employee of listOfEmployees">
           <a routerLink="/profile/{{ employee.id }}">
             <p class="block text-white font-bold mb-2">
               {{ employee.firstName }} {{ employee.lastName }}
@@ -37,14 +64,32 @@
         </div>
       </div> -->
 
-      <!-- edit employee list -->
-      <div>
-        <h1 class="text-white font-semibold text-xl mt-5 mb-3">CURRENT EMPLOYEES</h1>
-      </div>
+<!-- edit employee list -->
+
+<div
+  id="profile-container"
+  class="flex container font-bold text-3xl text-gray-700 mx-auto pt-10 p-2 items-center justify-center"
+>
+  CURRENT EMPLOYEES
+</div>
+<div
+  id="profile-container"
+  class="flex container mx-auto items-center justify-center"
+>
+  <div class="w-full max-w-xs">
+    <form class="bg-gray-700 shadow-none rounded px-4 pt-4 pb-4 mb-2">
+      <!-- <div>
+        <h1 class="text-white font-semibold text-xl mt-5 mb-3">
+          CURRENT EMPLOYEES
+        </h1>
+      </div> -->
 
       <div *ngFor="let employee of listOfEmployees">
         <div>
-          <h3 class="text-white text-xl font-semibold text-bold mt-2 mb-1" value="employee.loginId">
+          <h3
+            class="text-white text-xl font-semibold text-bold mt-2 mb-1"
+            value="employee.loginId"
+          >
             {{ employee.id }} - {{ employee.firstName }} {{ employee.lastName }}
           </h3>
 
@@ -66,7 +111,8 @@
           <a [routerLink]="['/update', employee.id]">
             <button
               class="bg-olive-400 hover:bg-opacity-80 text-white font-bold mb-6 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="submit">
+              type="submit"
+            >
               EDIT EMPLOYEE
             </button>
           </a>
@@ -88,4 +134,3 @@
     </form>
   </div>
 </div>
-
