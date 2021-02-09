@@ -13,7 +13,7 @@
     <form class="bg-gray-700 shadow-none rounded px-2 pt-6 pb-8 mb-4">
       <div class="px-6 mb-10">
         <label class="text-white text-sm font-bold mb-2" for="userID">
-<!--
+          <!--
     <form class="bg-gray-700 shadow-none rounded px-2 pt-2 pb-8 mb-2">
       <div class="px-6 mb-8">
         <label class="flex flexcontainer text-white text-md font-bold mb-2 pt-1 items-center justify-center" for="userID">
@@ -27,7 +27,7 @@
       <!-- gave button id to try to create pop up -->
 
       <div id="clockInButton" class="grid m-3 y-.5 mb-2">
-       
+
         <button
           class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
           type="button" (click)="clockIn()">
@@ -39,7 +39,7 @@
           type="button" (click)="clockOut()">
           Clock Out!
         </button>
-      
+
       </div>
       <!-- <div class="grid m-3 y-.5">
         <button
@@ -56,3 +56,30 @@
     </form>
   </div>
 </div>
+<div *ngIf="displayAlert" 
+class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none 
+focus:outline-none justify-center items-center flex">
+  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+    <!--content-->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white 
+      outline-none focus:outline-none">
+    <!--header-->
+    <div class="items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
+      <h3 class="text-3xl text-gray-700 font-semibold">
+        {{alertmessage}} </h3><br>
+      <h3 class="text-xl text-gray-700 font-semibold">
+        {{time|date:"medium"}} </h3>
+    </div>
+    <!--footer-->
+    <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
+      <button
+        class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+        type="button" style="transition: all .15s ease" (click)="toggleAlert()">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+<div *ngIf="displayAlert" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
