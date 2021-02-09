@@ -52,10 +52,11 @@ export class EmployeeService {
   }
 
   clockIn(loginId: string): Observable<any>{
-return this.http.post<any>(`${this.myEmployeeURL}`, {loginId});
+    return this.http.post<any>(`${this.backendEmployeeURL}/clockin`, {loginId});
   }
 
   clockOut(loginId: string): Observable<any>{
-    return this.http.post<any>(`${this.myEmployeeURL}`, {loginId});
+    return this.http.post<any>(`${this.backendEmployeeURL}/clockout`, {loginId});
+
       }
 }

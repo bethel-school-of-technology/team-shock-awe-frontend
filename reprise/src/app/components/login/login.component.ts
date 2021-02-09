@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   clockIn() {
     this.myEmployeeService.clockIn(this.loginId).subscribe((res) => {
       console.log(res);
-      if(res){
+      if(res.status === 200){
         window.alert("You are clocked in!")
       } else {
         window.alert("Error clocking in")
