@@ -16,6 +16,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RegisterAdminComponent } from './components/register-admin/register-adm
     UpdateComponent,
     AdminLoginComponent,
     RegisterAdminComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,9 @@ import { RegisterAdminComponent } from './components/register-admin/register-adm
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AlertComponent
+  ]
 })
 export class AppModule { }

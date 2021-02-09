@@ -5,9 +5,19 @@
 
 <div id="login-container" class="flex container mx-auto items-center justify-center">
   <div class="w-full max-w-xs">
+
+    <app-alert [message]="clockIn" *ng If="clockIn"></app-alert>
+    <div *ngIf="clockIn">
+      <!-- <app-loading-spinner></app-loading-spinner> -->
+    </div>
+    <form class="bg-gray-700 shadow-none rounded px-2 pt-6 pb-8 mb-4">
+      <div class="px-6 mb-10">
+        <label class="text-white text-sm font-bold mb-2" for="userID">
+<!--
     <form class="bg-gray-700 shadow-none rounded px-2 pt-2 pb-8 mb-2">
       <div class="px-6 mb-8">
         <label class="flex flexcontainer text-white text-md font-bold mb-2 pt-1 items-center justify-center" for="userID">
+-->
           USER ID
         </label>
         <input
@@ -15,6 +25,7 @@
           id="loginId" name="loginId" type="text" placeholder="####" maxlength="4" size="4" [(ngModel)]="loginId" />
       </div>
       <!-- gave button id to try to create pop up -->
+
       <div id="clockInButton" class="grid m-3 y-.5 mb-2">
        
         <button
@@ -28,6 +39,7 @@
           type="button" (click)="clockOut()">
           Clock Out!
         </button>
+      
       </div>
       <!-- <div class="grid m-3 y-.5">
         <button
