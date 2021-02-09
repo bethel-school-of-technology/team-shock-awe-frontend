@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 // imported to get the employee information
 import { Employee } from '../models/employee';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -41,7 +42,7 @@ export class EmployeeService {
 
   registerEmployee(newEmployee: Employee): Observable<Employee> {
 
-    return this.http.post<Employee>(this.myEmployeeURL, newEmployee);
+    return this.http.post<Employee>(this.backendEmployeeURL + '/register', newEmployee);
   }
 
   // a way to delete employees (DELETE)

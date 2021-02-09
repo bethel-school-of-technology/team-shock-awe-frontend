@@ -4,7 +4,7 @@
 
 
   <div id="adminlogin-container" class="flex container mx-auto items-center justify-center">
-    <div class="w-full max-w-xs">
+    <div class="w-full max-w-sm">
       <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4">
         <div class="mb-6">
           <label class="block text-white text-sm font-bold mb-2" for="firstName">
@@ -12,20 +12,22 @@
           </label>
           <input
             class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="firstname" type="text" placeholder="LOGIN">
+            id="userName" type="text" placeholder="Username" [(ngModel)]= "userName"> 
         </div>
         <div class="mb-6">
-          <label class="block text-white text-sm font-bold mb-2" for="password">
+          <label class="block text-white text-sm font-bold mb-2" for="password" >
+
             Password
           </label>
           <input
             class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="password" type="password" placeholder="******************">
+            id="password" type="password" placeholder="******************" [(ngModel)]= "password">
         </div>
         <div class="flex items-center justify-between">
           <button
             class="bg-olive-400 hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button">
+            type="button" (click)="login()"
+            >
             LOGIN
           </button>
         </div>

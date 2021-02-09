@@ -11,15 +11,20 @@
 
 </html>
 
-<div id="shipping-container"
-  class="flex container font-bold text-5xl text-gray-700 mx-auto p-8 items-center justify-center">
-  SHIPPING DEPARTMENT
+<div
+  id="shipping-container"
+  class="mb-4 mt-6"
+>
+  <h3 class="flex container font-bold text-5xl text-gray-700 mx-auto mb-0  items-center justify-center">SHIPPING</h3>
+  <h5 class="flex container font-bold text-2xl text-gray-700 mx-auto items-center justify-center">DEPARTMENT</h5>
 </div>
 
 <div id="ship-container" class="flex container mx-auto items-center justify-center">
   <div class="w-full max-w-xs">
-    <form class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4">
-      <div *ngFor="let employee of listofemployees">
+    <form class="bg-gray-700 shadow-none rounded-full px-4 pt-6 pb-8 mb-4">
+      <div
+        *ngFor="let employee of listofemployees"
+      >
         <div *ngIf="employee.department == 'shipping'">
           <a routerLink="/login">
             <button

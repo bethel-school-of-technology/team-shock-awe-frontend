@@ -12,7 +12,7 @@ export class Employee {
   position: string ="";
   wageRate: string ="";
   active: string ="";
-  inactive: boolean = false;
+  // inactive: boolean = false;
   admin: boolean = false;
 }
 
