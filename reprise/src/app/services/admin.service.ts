@@ -55,7 +55,14 @@ export class AdminService {
 
  login(userName: string, password: string): Observable<any>{
   const user = {userName: userName, password: password}
-  return this.http.post<any>(`${this.myAdminURL}/login`, {userName, password});
+  return this.http.post<any>(`${this.backendAdminURL}/login`, {userName, password});
+    }
+
+    getAdminProfile(): Observable<any>{
+      let kbHeaders = {
+        authorization: localStorage.getItem("kbtoken")
+      }
+      return this.http.get<any>(`${this.backendAdminURL}/profile`,{headers: kbHeaders})
     }
 
 }

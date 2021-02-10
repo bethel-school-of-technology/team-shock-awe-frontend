@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/services/admin.service';
+import { Router } from '@angular/router';
 
 
 
@@ -9,7 +10,7 @@ import { AdminService } from 'src/app/services/admin.service';
   styleUrls: ['./admin-login.component.scss']
 })
 export class AdminLoginComponent implements OnInit {
-  constructor(private myAdminService: AdminService) { }
+  constructor(private myAdminService: AdminService, private myRouter: Router) { }
 
   userName = "";
   password = "";
@@ -22,7 +23,9 @@ export class AdminLoginComponent implements OnInit {
     this.myAdminService.login(this.userName, this.password).subscribe((res) => {
       console.log(res);
       if (res.status === 200) {
+        localStorage.setItem("kbtoken", res.token)
         window.alert("You are logged in!")
+        this.myRouter.navigate(["/profile"])
       } else {
         window.alert("Error logging in!")
       }
