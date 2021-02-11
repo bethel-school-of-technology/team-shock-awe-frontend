@@ -4,7 +4,7 @@
       "id": 1,
       "firstName": "Fisher",
       "lastName": "Price",
-      "loginId": 1234,
+      "loginId": "1234",
       "address": "4228 beckerdite Road",
       "state": "NC",
       "zipCode": 27350,
@@ -21,7 +21,7 @@
       "id": 2,
       "firstName": "Queen",
       "lastName": "Bee",
-      "loginId": 5678,
+      "loginId": "5678",
       "address": "4228 My House Road",
       "state": "NC",
       "zipcode": 64081,
@@ -37,7 +37,7 @@
       "id": 3,
       "firstName": "Mr Moo",
       "lastName": "Mongoose",
-      "loginId": 8910,
+      "loginId": "8910",
       "address": "4228 Dragon Road",
       "state": "FL",
       "zipcode": 23408,
@@ -57,7 +57,7 @@
       "zipCode": 27350,
       "email": "sydneemela@gmail.com",
       "phoneNumber": 8168063757,
-      "loginId": 1234,
+      "loginId": "1234",
       "department": "production",
       "position": "Manager",
       "wageRate": 13,
@@ -71,7 +71,7 @@
       "zipCode": 27350,
       "email": "sydneemela@gmail.com",
       "phoneNumber": 8168063757,
-      "loginId": 4228,
+      "loginId": "4228",
       "department": "production",
       "position": "Manager",
       "wageRate": 400,
@@ -94,7 +94,7 @@
     {
       "firstName": "Finding",
       "lastName": "Nemo",
-      "loginId": 3642,
+      "loginId": "3642",
       "streetAddress": "Home",
       "state": "FL",
       "zipCode": 34780,
@@ -112,17 +112,11 @@
       "state": "MO - Missouri",
       "zipCode": 64081,
       "phoneNumber": 8162170543,
-      "loginId": 4321,
+      "loginId": "4321",
       "department": "production",
       "position": "Developer",
       "wageRate": 100,
       "id": 8
-    },
-    {
-      "id": 9,
-      "firstName": "Bill",
-      "lastName": "Marley",
-      "department": "production"
     },
     {
       "id": 10,
@@ -137,12 +131,6 @@
       "phoneNumber": "9874958793",
       "position": "Shipper",
       "wageRate": 10
-    },
-    {
-      "id": 11,
-      "firstName": "Sherbert",
-      "lastName": "Ice Cream",
-      "department": "shipping"
     },
     {
       "firstName": "Larry",
@@ -160,91 +148,6 @@
       "loginId": "9879",
       "zipCode": "98798",
       "id": 12
-    },
-    {
-      "firstName": "Swimming",
-      "lastName": "Swimming",
-      "streetAddress": "Ocean way",
-      "state": "Ca",
-      "email": "ocean@gmail.com",
-      "phoneNumber": "0009998888",
-      "department": "production",
-      "position": "Product",
-      "wageRate": 30,
-      "active": "",
-      "inactive": false,
-      "admin": false,
-      "loginId": "5555",
-      "zipCode": "99999",
-      "id": 13
-    },
-    {
-      "loginId": "1234",
-      "id": 14
-    },
-    {
-      "loginId": "1234",
-      "id": 15
-    },
-    {
-      "loginId": "1234",
-      "id": 16
-    },
-    {
-      "loginId": "1234",
-      "id": 17
-    },
-    {
-      "loginId": "1234",
-      "id": 18
-    },
-    {
-      "loginId": "1234",
-      "id": 19
-    },
-    {
-      "loginId": "1234",
-      "id": 20
-    },
-    {
-      "loginId": "1234",
-      "id": 21
-    },
-    {
-      "loginId": "1234",
-      "id": 22
-    },
-    {
-      "loginId": "1234",
-      "id": 23
-    },
-    {
-      "loginId": "1234",
-      "id": 24
-    },
-    {
-      "loginId": "1234",
-      "id": 25
-    },
-    {
-      "loginId": "1234",
-      "id": 26
-    },
-    {
-      "loginId": "1234",
-      "id": 27
-    },
-    {
-      "loginId": "1234",
-      "id": 28
-    },
-    {
-      "loginId": "1111",
-      "id": 29
-    },
-    {
-      "loginId": "1234",
-      "id": 30
     }
   ]
 }
