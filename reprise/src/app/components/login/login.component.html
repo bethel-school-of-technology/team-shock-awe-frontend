@@ -62,21 +62,21 @@ focus:outline-none justify-center items-center flex">
   <div class="relative w-auto my-6 mx-auto max-w-6xl">
     <!--content-->
     <div
-      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white 
-      outline-none focus:outline-none">
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-700 
+      outline-none focus:outline-none p-6 border border-solid border-olive-400 rounded-b">
     <!--header-->
-    <div class="items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-      <h3 class="text-3xl text-gray-700 font-semibold">
+    <div class="items-start justify-between bg-gray-700">
+      <h3 class="text-3xl text-olive-300 font-semibold">
         {{alertmessage}} </h3><br>
-      <h3 class="text-xl text-gray-700 font-semibold">
+      <h3 class="text-xl text-white font-semibold">
         {{time|date:"medium"}} </h3>
     </div>
     <!--footer-->
-    <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
+    <div class="flex items-center bg-gray-700 justify-end">
       <button
         class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
         type="button" style="transition: all .15s ease" (click)="toggleAlert()">
-        Close
+        ROCK IT
       </button>
     </div>
   </div>
