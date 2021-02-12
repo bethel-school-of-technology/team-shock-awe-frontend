@@ -17,7 +17,7 @@ export class ProdComponent implements OnInit {
   ngOnInit(): void {
     this.myEmployeeService.getAllEmployees().subscribe(response => {
       console.log(response);
-      this.listofemployees = response;
+      this.listofemployees = response.employeeList;
     })
   }
 }

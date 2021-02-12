@@ -20,8 +20,8 @@ export class EmployeeService {
   // now I lists all the tasks that I need to complete
 
   //a way to list all employees (READ)
-  getAllEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.myEmployeeURL);
+  getAllEmployees(): Observable<any> {
+    return this.http.get<Employee[]>(this.backendEmployeeURL + "/getallemployees");
   }
 
   //a way to list one employee (READ)
