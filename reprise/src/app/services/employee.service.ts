@@ -33,16 +33,23 @@ export class EmployeeService {
   // a way to edit an employee (UPDATE)
   // component needs to provide the ID as well as the updated employee info
   updateEmployee(edittedInfo: Employee): Observable<any> {
+    // go get this token and save it
+    let kbHeaders = {
+      authorization: localStorage.getItem("kbtoken")
+    }
     console.log(edittedInfo);
-    return this.http.put<Employee>(this.backendEmployeeURL + '/' + edittedInfo.id, edittedInfo);
+    return this.http.put<Employee>(this.backendEmployeeURL + '/' + edittedInfo.id, edittedInfo, {headers: kbHeaders});
   }
 
   // a way to create a new employee (CREATE)
   // component needs to provide new contact information
 
   registerEmployee(newEmployee: Employee): Observable<Employee> {
-
-    return this.http.post<Employee>(this.backendEmployeeURL + '/register', newEmployee);
+    // go get this token and save it
+    let kbHeaders = {
+      authorization: localStorage.getItem("kbtoken")
+    }
+    return this.http.post<Employee>(this.backendEmployeeURL + '/register', newEmployee, {headers: kbHeaders});
   }
 
   // a way to delete employees (DELETE)
