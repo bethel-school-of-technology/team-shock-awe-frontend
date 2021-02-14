@@ -14,6 +14,8 @@ export class AdminLoginComponent implements OnInit {
 
   userName = "";
   password = "";
+  displayAlert: boolean = false;
+  alertmessage: string = "";
 
   ngOnInit(): void {
 
@@ -27,8 +29,15 @@ export class AdminLoginComponent implements OnInit {
         // window.alert("You are logged in!")
         this.myRouter.navigate(["/profile"])
       } else {
-        window.alert("Error logging in!")
+        // window.alert("Incorrect username or password")
+        this.alertmessage = res.message
+        this.displayAlert = true;
       }
     });
+  }
+  // TO CALL THE ALERT MESSGE
+  toggleAlert() {
+    this.displayAlert = !this.displayAlert;
+  }
 
-  }}
+}

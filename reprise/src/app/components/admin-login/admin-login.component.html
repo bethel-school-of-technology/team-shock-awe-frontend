@@ -34,3 +34,31 @@
       </form>
     </div>
   </div>
+
+
+  <!-- window alert FOR THE INCORRECT LOGIN -->
+  <div *ngIf="displayAlert" 
+class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none 
+focus:outline-none justify-center items-center flex">
+  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+    <!--content-->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-700 
+      outline-none focus:outline-none p-6 border border-solid border-olive-400 rounded-b">
+    <!--header-->
+    <div class="items-start justify-between bg-gray-700">
+      <h3 class="text-3xl text-olive-300 font-semibold">
+        {{alertmessage}} </h3><br>
+    </div>
+    <!--footer-->
+    <div class="flex items-center bg-gray-700 justify-end">
+      <button
+        class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+        type="button" style="transition: all .15s ease" (click)="toggleAlert()">
+        TRY AGAIN
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+<div *ngIf="displayAlert" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
