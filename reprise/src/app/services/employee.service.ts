@@ -32,9 +32,9 @@ export class EmployeeService {
 
   // a way to edit an employee (UPDATE)
   // component needs to provide the ID as well as the updated employee info
-  updateEmployee(edittedInfo: Employee): Observable<Employee> {
+  updateEmployee(edittedInfo: Employee): Observable<any> {
     console.log(edittedInfo);
-    return this.http.put<Employee>(this.myEmployeeURL + '/' + edittedInfo.id, edittedInfo);
+    return this.http.put<Employee>(this.backendEmployeeURL + '/' + edittedInfo.id, edittedInfo);
   }
 
   // a way to create a new employee (CREATE)

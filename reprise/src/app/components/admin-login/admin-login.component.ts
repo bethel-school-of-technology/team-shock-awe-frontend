@@ -24,7 +24,7 @@ export class AdminLoginComponent implements OnInit {
       console.log(res);
       if (res.status === 200) {
         localStorage.setItem("kbtoken", res.token)
-        window.alert("You are logged in!")
+        // window.alert("You are logged in!")
         this.myRouter.navigate(["/profile"])
       } else {
         window.alert("Error logging in!")

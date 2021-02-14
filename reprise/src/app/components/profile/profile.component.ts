@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.myEmployeeService.getAllEmployees().subscribe(response => {
       console.log(response);
-      this.listOfEmployees = response;
+      this.listOfEmployees = response.employeeList;
     })
     this.myAdminService.getAdminProfile().subscribe(response => {
       console.log(response);
