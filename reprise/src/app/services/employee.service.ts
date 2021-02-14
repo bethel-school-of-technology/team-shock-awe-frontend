@@ -13,6 +13,7 @@ import { Employee } from '../models/employee';
 export class EmployeeService {
   myEmployeeURL: string = 'http://localhost:3000/employees';
   backendEmployeeURL: string = 'http://localhost:5000/api/employees';
+  adminBackendURL: string = 'http://localhost:5000/api/users';
 
   // add this http client in the brakets and creates an import
   constructor(private http: HttpClient) {}
@@ -26,8 +27,12 @@ export class EmployeeService {
 
   //a way to list one employee (READ)
   // component needs to send an ID for the employee
-  getOneEmployee(reqID: number): Observable<Employee> {
-    return this.http.get<Employee>(this.myEmployeeURL + '/' + reqID);
+  getOneEmployee(reqID: number): Observable<any> {
+    let kbHeaders = {
+      authorization: localStorage.getItem("kbtoken")
+    }
+    console.log(reqID);
+    return this.http.get<Employee>(this.backendEmployeeURL + '/getoneemployee' + "/" + reqID, {headers: kbHeaders});
   }
 
   // a way to edit an employee (UPDATE)
@@ -38,7 +43,7 @@ export class EmployeeService {
       authorization: localStorage.getItem("kbtoken")
     }
     console.log(edittedInfo);
-    return this.http.put<Employee>(this.backendEmployeeURL + '/' + edittedInfo.id, edittedInfo, {headers: kbHeaders});
+    return this.http.put<Employee>(this.adminBackendURL + '/update' + "/" + edittedInfo.id, edittedInfo, {headers: kbHeaders});
   }
 
   // a way to create a new employee (CREATE)

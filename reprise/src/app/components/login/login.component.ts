@@ -8,53 +8,52 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private myEmployeeService: EmployeeService) { }
+  constructor(private myEmployeeService: EmployeeService) {}
 
-  loginId = "";
+  loginId = '';
   displayAlert: boolean = false;
-  alertmessage: string = "";
-  time = "";
-timeWorked = "";
-timeString = "";
-firstName = "";
-lastName = "";
+  alertmessage: string = '';
+  time = '';
+  timeWorked = '';
+  timeString = '';
+  firstName = '';
+  lastName = '';
 
-
-  ngOnInit(): void { }
+  ngOnInit(): void {}
   clockIn() {
-    this.timeString = "";
+    this.timeString = '';
     this.myEmployeeService.clockIn(this.loginId).subscribe((res) => {
       console.log(res);
 
       if (res.status === 200) {
-        this.alertmessage = res.message
-        this.firstName = res.firstName
-        this.lastName = res.lastName
-        this.time = res.time
+        this.alertmessage = res.message;
+        this.firstName = res.firstName;
+        this.lastName = res.lastName;
+        this.time = res.time;
         this.displayAlert = true;
         // window.alert("You are clocked in!")
       } else {
-        this.time = "";
-        this.alertmessage = res.message
+        this.time = '';
+        this.alertmessage = res.message;
         this.displayAlert = true;
-       // window.alert("Error clocking in")
+        // window.alert("Error clocking in")
       }
     });
   }
   clockOut() {
-    this.timeString = "";
+    this.timeString = '';
     this.myEmployeeService.clockOut(this.loginId).subscribe((res) => {
       console.log(res);
       if (res.status === 200) {
-        this.alertmessage = res.message
-        this.time = res.time
-        this.timeWorked = res.timeWorked
-        this.timeString = this.timeWorkedString (this.timeWorked)
+        this.alertmessage = res.message;
+        this.time = res.time;
+        this.timeWorked = res.timeWorked;
+        this.timeString = this.timeWorkedString(this.timeWorked);
         this.displayAlert = true;
         // window.alert("You are clocked out!")
       } else {
-        this.time = "";
-        this.alertmessage = res.message
+        this.time = '';
+        this.alertmessage = res.message;
         this.displayAlert = true;
         // window.alert("Error clocking out")
       }
@@ -77,18 +76,20 @@ lastName = "";
 
     var timeString = '';
     if (days !== 0) {
-        timeString += (days !== 1) ? (days + ' days ') : (days + ' day ');
+      timeString += days !== 1 ? days + ' days ' : days + ' day ';
     }
     if (hours !== 0) {
-        timeString += (hours !== 1) ? (hours + ' hours ') : (hours + ' hour ');
+      timeString += hours !== 1 ? hours + ' hours ' : hours + ' hour ';
     }
     if (minutes !== 0) {
-        timeString += (minutes !== 1) ? (minutes + ' minutes ') : (minutes + ' minute ');
+      timeString +=
+        minutes !== 1 ? minutes + ' minutes ' : minutes + ' minute ';
     }
     if (seconds !== 0 || millseconds < 1000) {
-        timeString += (seconds !== 1) ? (seconds + ' seconds ') : (seconds + ' second ');
+      timeString +=
+        seconds !== 1 ? seconds + ' seconds ' : seconds + ' second ';
     }
 
     return timeString;
-};
+  }
 }
