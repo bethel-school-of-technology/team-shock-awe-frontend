@@ -6,33 +6,39 @@ import { EmployeeService } from 'src/app/services/employee.service';
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
-  styleUrls: ['./update.component.scss']
+  styleUrls: ['./update.component.scss'],
 })
 export class UpdateComponent implements OnInit {
+  editEmployee: Employee = new Employee();
 
- editEmployee: Employee = new Employee();
+  id: string;
 
- id: number;
-
-  constructor(private actRoute: ActivatedRoute, private myEmployeeService: EmployeeService, private router: Router) { }
+  constructor(
+    private actRoute: ActivatedRoute,
+    private myEmployeeService: EmployeeService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     // Extracted the ID from the URL
-    this.id = parseInt(this.actRoute.snapshot.paramMap.get("id"));
+    this.id = this.actRoute.snapshot.paramMap.get('id');
     console.log(this.id);
 
     // Fetch the contact corresponding to the ID
-    this.myEmployeeService.getOneEmployee(this.id).subscribe(response =>{
+    this.myEmployeeService.getOneEmployee(this.id).subscribe((response) => {
       console.log(response);
       this.editEmployee = response;
-    })
+    });
   }
 
   // this calls so that the form will work on the update page
-  updateEmployee(myForm){
-this.myEmployeeService.updateEmployee(this.editEmployee).subscribe(response =>{
-  console.log(response);
-this.router.navigate(["profile"]);
-})
+  updateEmployee() {
+    console.log(this.id)
+    this.myEmployeeService
+      .updateEmployee(this.editEmployee, this.id)
+      .subscribe((response) => {
+        console.log(response);
+        this.router.navigate(['profile']);
+      });
   }
 }

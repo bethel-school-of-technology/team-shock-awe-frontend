@@ -27,7 +27,7 @@ export class EmployeeService {
 
   //a way to list one employee (READ)
   // component needs to send an ID for the employee
-  getOneEmployee(reqID: number): Observable<any> {
+  getOneEmployee(reqID: string): Observable<any> {
     let kbHeaders = {
       authorization: localStorage.getItem("kbtoken")
     }
@@ -37,13 +37,13 @@ export class EmployeeService {
 
   // a way to edit an employee (UPDATE)
   // component needs to provide the ID as well as the updated employee info
-  updateEmployee(edittedInfo: Employee): Observable<any> {
+  updateEmployee(edittedInfo: Employee, editId: string): Observable<any> {
     // go get this token and save it
     let kbHeaders = {
       authorization: localStorage.getItem("kbtoken")
     }
     console.log(edittedInfo);
-    return this.http.put<Employee>(this.adminBackendURL + '/update' + "/" + edittedInfo.id, edittedInfo, {headers: kbHeaders});
+    return this.http.put<any>(this.adminBackendURL + '/update' + "/" + editId, edittedInfo, {headers: kbHeaders});
   }
 
   // a way to create a new employee (CREATE)

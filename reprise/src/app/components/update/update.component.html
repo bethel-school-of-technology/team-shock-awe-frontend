@@ -21,7 +21,7 @@
     <!-- ****update the ngSubmit and call the add employee function that we made to edit the employee ts file. -->
     <form
       class="bg-gray-700 shadow-none rounded px-4 pt-6 pb-8 mb-4"
-      (ngSubmit)="updateEmployee(myForm)"
+      (ngSubmit)="updateEmployee()"
       #myForm='ngForm'
     >
       <!-- <img src="../../assets/logo.png" class="logo" /> -->
@@ -67,7 +67,7 @@
         />
       </div>
       <div class="mb-6">
-        <label class="block text-white text-sm font-bold mb-2" for="address">
+        <label class="block text-white text-sm font-bold mb-2" for="streetAddress">
           Street Address
         </label>
         <input

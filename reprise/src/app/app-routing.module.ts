@@ -10,13 +10,14 @@ import { ShipComponent } from './components/ship/ship.component';
 import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
+import { AuthGuardGuard } from './auth-guard.guard';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'prod', component: ProdComponent},
-  { path: 'profile', component: ProfileComponent},
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardGuard]},
   { path: 'register', component: RegisterComponent},
   { path: 'ship', component: ShipComponent},
   { path: 'update/:id', component: UpdateComponent},

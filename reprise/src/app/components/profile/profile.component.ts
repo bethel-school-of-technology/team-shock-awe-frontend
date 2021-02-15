@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from 'src/app/models/employee';
 import { AdminService } from 'src/app/services/admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -13,16 +14,24 @@ export class ProfileComponent implements OnInit {
   // property to store all employees from the method of pulling them
   listOfEmployees: Employee[] = [];
 
-  constructor(private myEmployeeService: EmployeeService, private myAdminService: AdminService) { }
+  constructor(private myEmployeeService: EmployeeService, private myAdminService: AdminService, private myRouter: Router) {
+    
+   }
 
   ngOnInit(): void {
-    this.myEmployeeService.getAllEmployees().subscribe(response => {
-      console.log(response);
-      this.listOfEmployees = response.employeeList;
-    })
-    this.myAdminService.getAdminProfile().subscribe(response => {
-      console.log(response);
-    })
+      // this.myEmployeeService.getAllEmployees().subscribe(response => {
+      //   console.log(response);
+      //   this.listOfEmployees = response.employeeList;
+      // })
+      this.myAdminService.getAdminProfile().subscribe(response => {
+        console.log(response);
+        if (response.status === 200){
+          this.listOfEmployees = response.user.employeeList
+        } else (
+          this.myRouter.navigate(["/admin-login"])
+        )
+      })
+    
   }
 
 }
