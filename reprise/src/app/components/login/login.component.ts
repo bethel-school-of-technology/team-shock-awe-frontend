@@ -53,6 +53,8 @@ export class LoginComponent implements OnInit {
         // window.alert("You are clocked out!")
       } else {
         this.time = '';
+        this.firstName = '';
+        this.lastName = '';
         this.alertmessage = res.message;
         this.displayAlert = true;
         // window.alert("Error clocking out")
