@@ -19,8 +19,8 @@ export class AuthGuardGuard implements CanActivate {
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     
       if (this.myAdminService.checkLogin()== true) {
-        alert("You don't have access");
-        this.myRouter.navigate(['/admin-login']);
+        // alert("You don't have access");
+        this.myRouter.navigate(['/no-access']);
         return false;
       }
       return true;

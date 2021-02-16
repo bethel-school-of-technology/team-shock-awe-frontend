@@ -17,6 +17,7 @@ import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { NoAccessComponent } from './no-access/no-access.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AlertComponent } from './components/alert/alert.component';
     UpdateComponent,
     AdminLoginComponent,
     RegisterAdminComponent,
-    AlertComponent
+    AlertComponent,
+    NoAccessComponent
   ],
   imports: [
     BrowserModule,
