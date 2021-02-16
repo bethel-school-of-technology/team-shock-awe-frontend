@@ -36,11 +36,13 @@ export class RegisterComponent implements OnInit {
             this.router.navigate(['/profile']);
           }
           else{
-            alert("Check Login ID or Email");
+            alert("Need Unique Login ID or Email");
           }
         });
     }
   }
+
+  
 
   // requiring the form to be filled out before submitting
   validateForm(emp: Employee) {

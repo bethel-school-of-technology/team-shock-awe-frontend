@@ -17,7 +17,7 @@ import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
 import { AlertComponent } from './components/alert/alert.component';
-import { NoAccessComponent } from './no-access/no-access.component';
+import { NoAccessComponent } from './components/no-access/no-access.component';
 
 @NgModule({
   declarations: [
