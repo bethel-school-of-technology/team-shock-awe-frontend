@@ -30,9 +30,10 @@ export class ProfileComponent implements OnInit {
         if (response.status === 200){
           this.listOfEmployees = response.user.employeeList
         } else {
-          this.myRouter.navigate(["/admin-login"])
+          this.alertmessage = "YOU DO NOT HAVE ACCESS"
           this.displayAlert = true;
-          // this.alertmessage = res.message   ---can't get this to work
+          this.myRouter.navigate(["/admin-login"])
+          
         }
       });
   }

@@ -11,6 +11,7 @@ import { UpdateComponent } from './components/update/update.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { RegisterAdminComponent } from './components/register-admin/register-admin.component';
 import { AuthGuardGuard } from './auth-guard.guard';
+import { NoAccessComponent } from './no-access/no-access.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'ship', component: ShipComponent},
   { path: 'update/:id', component: UpdateComponent},
   { path: 'admin-login', component: AdminLoginComponent},
-  { path: 'register-admin', component: RegisterAdminComponent}
+  { path: 'register-admin', component: RegisterAdminComponent},
+  { path: 'no-access', component: NoAccessComponent}
 ];
 
 @NgModule({

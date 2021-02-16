@@ -76,8 +76,8 @@ export class AdminService {
     console.log(token);
     if (token === null){
       console.log('token is null')
-      alert("You don't have access");
-        this.myRouter.navigate(['/admin-login']);
+      // alert("You don't have access");
+        this.myRouter.navigate(['/no-access']);
       return false;
     }
     if(localStorage.getItem('kbtoken')){

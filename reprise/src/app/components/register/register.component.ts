@@ -30,9 +30,14 @@ export class RegisterComponent implements OnInit {
     if (validated) {
       this.myEmployeeService
         .registerEmployee(this.newEmployee)
-        .subscribe((myResponse) => {
+        .subscribe((myResponse: any) => {
           console.log(myResponse);
-          this.router.navigate(['/profile']);
+          if(myResponse.status === 200){
+            this.router.navigate(['/profile']);
+          }
+          else{
+            alert("Check Login ID or Email");
+          }
         });
     }
   }
