@@ -23,7 +23,7 @@
         </label>
         <input [(ngModel)]="newAdmin.lastName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="lastname" type="text" placeholder="Last Name" />
+          name="lastname" type="text" placeholder="Last Name" required/>
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="email">
@@ -31,7 +31,7 @@
         </label>
         <input [(ngModel)]="newAdmin.email"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="email" type="email" placeholder="Email" />
+          name="email" type="email" placeholder="Email" required/>
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="userName">
@@ -39,7 +39,7 @@
         </label>
         <input [(ngModel)]="newAdmin.userName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="userName" type="text" placeholder="User Name" />
+          name="userName" type="text" placeholder="User Name" required/>
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="password">
@@ -47,7 +47,7 @@
         </label>
         <input [(ngModel)]="newAdmin.password"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="password" type="text" placeholder="************" />
+          name="password" type="text" placeholder="************" required/>
       </div>
 
       <div class="flex items-center justify-between">
