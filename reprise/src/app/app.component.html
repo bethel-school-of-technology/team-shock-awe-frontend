@@ -46,6 +46,12 @@
             <li>
               <a
                 class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-olive-300 text-white hover:text-olive-300"
+                *ngIf="getToken()" routerLink="/profile">
+                PROFILE</a>
+            </li>
+            <li>
+              <a
+                class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-olive-300 text-white hover:text-olive-300"
                 *ngIf="getToken()" (click)="adminlogout()" routerLink="">
                 ADMIN LOGOUT</a>
             </li>
