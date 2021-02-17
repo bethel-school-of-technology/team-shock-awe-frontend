@@ -18,6 +18,9 @@ export class RegisterComponent implements OnInit {
     private router: Router
   ) {}
 
+  displayAlert: boolean = false;
+  alertmessage: string = '';
+
   ngOnInit(): void {}
 
   // creating the response to add employee service function
@@ -41,47 +44,59 @@ export class RegisterComponent implements OnInit {
         });
     }
   }
-
   
 
   // requiring the form to be filled out before submitting
   validateForm(emp: Employee) {
     if (emp.firstName.length === 0 || emp.firstName === null) {
-      alert('First Name Cannot Be Empty');
+      this.alertmessage = 'First Name Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.lastName.length === 0 || emp.lastName === null) {
-      alert('Last Name Cannot Be Empty');
+      this.alertmessage = 'Last Name Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.streetAddress.length === 0 || emp.streetAddress === null) {
-      alert('Street Address Cannot Be Empty');
+      this.alertmessage = 'Street Address Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.state.length === 0 || emp.state === null) {
-      alert('State Cannot Be Empty');
+      this.alertmessage = 'State Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.email.length === 0 || emp.email === null) {
-      alert('Email Cannot Be Empty');
+      this.alertmessage = 'Email Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.phoneNumber.length === 0 || emp.phoneNumber === null) {
-      alert('Phone Number Cannot Be Empty');
+      this.alertmessage = 'Phone Number Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.department.length === 0 || emp.department === null) {
-      alert('Department Cannot Be Empty');
+      this.alertmessage = 'Department Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.position.length === 0 || emp.position === null) {
-      alert('Position Cannot Be Empty');
+      this.alertmessage = 'Position Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     if (emp.wageRate.length === 0 || emp.wageRate === null) {
-      alert('Wage Rate Cannot Be Empty');
+      this.alertmessage = 'Wage Rate Cannot Be Empty';
+      this.displayAlert = true;
       return false;
     }
     return true;
+  }
+
+  toggleAlert() {
+    this.displayAlert = !this.displayAlert;
   }
 }

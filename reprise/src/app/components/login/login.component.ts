@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
         this.displayAlert = true;
         // window.alert("You are clocked in!")
       } else {
+        this.firstName = '';
+        this.lastName = '';
         this.time = '';
         this.alertmessage = res.message;
         this.displayAlert = true;

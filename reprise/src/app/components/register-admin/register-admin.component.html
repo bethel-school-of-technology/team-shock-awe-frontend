@@ -35,11 +35,11 @@
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="userName">
-          UserName
+          Username
         </label>
         <input [(ngModel)]="newAdmin.userName"
           class="shadow appearance-none border border-olive-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          name="userName" type="text" placeholder="User Name" required/>
+          name="userName" type="text" placeholder="Username" required/>
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="password">
@@ -60,4 +60,29 @@
       </div>
     </form>
   </div>
+</div>
+
+
+<div *ngIf="displayAlert" 
+class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none 
+focus:outline-none justify-center items-center flex">
+  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+    <!--content-->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-700 
+      outline-none focus:outline-none p-6 border border-solid border-olive-400 rounded-b">
+    <!--header-->
+    <div class="items-start justify-between bg-gray-700">
+      <h3 class="text-xl text-white font-semibold">
+        {{alertmessage}} </h3>
+    <!--footer-->
+    <div class="flex items-center bg-gray-700 justify-end">
+      <button
+        class="bg-olive-400 hover:bg-opacity-80 text-white font-bold px-3 m-2 p-3 rounded focus:outline-none focus:shadow-outline"
+        type="button" style="transition: all .15s ease" (click)="toggleAlert()">
+        FILL IN THE BLANKS
+      </button>
+    </div>
+  </div>
+</div>
 </div>
