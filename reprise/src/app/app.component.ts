@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reprise';
+
+
+getToken(){
+  return localStorage.getItem('kbtoken');
+}
+adminlogout(){
+  localStorage.clear();
+}
 }

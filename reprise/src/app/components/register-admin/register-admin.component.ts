@@ -13,19 +13,41 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterAdminComponent implements OnInit {
   newAdmin: Admin = new Admin();
-  constructor(private myAdminService: AdminService, private router: Router) {}
 
-  ngOnInit(): void {}
+  constructor(
+    private myAdminService: AdminService,
+    private router: Router
+  ) { }
+
+  ngOnInit(): void { }
 
   // creating the response to add admin service function
   registerAdmin() {
     console.log('testing');
     console.log(this.newAdmin);
-    
+
+
     // created the adminService function and then subscribed to my response
     this.myAdminService.registerAdmin(this.newAdmin).subscribe((myResponse) => {
-      console.log(myResponse);
-      this.router.navigate(['/profile']);
-    });
+    console.log(myResponse);
+    this.router.navigate(['/profile']);
+  });
   }
 }
+
+//     let validated = this.validateForm(this.newAdmin);
+//     // created the adminservice function and then subscribed to my response
+//     if (validated) {
+//       this.myAdminService
+//         .registerAdmin(this.newAdmin)
+//         .subscribe((myResponse: any) => {
+//           console.log(myResponse);
+//           if (myResponse.status === 200) {
+//             this.router.navigate(['/profile']);
+//           }
+//           else {
+//             alert("Unique Username and Email Required");
+//           }
+//         });
+//     }
+//   }
