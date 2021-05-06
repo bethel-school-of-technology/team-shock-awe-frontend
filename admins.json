@@ -1,0 +1,14 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "firstName": "Sydnee",
+      "lastName": "Mela",
+      "email": "sydneemela@gmail.com",
+      "userName": "Manager",
+      "password": "15",
+      "delete": "true",
+      "admin": "true"
+    }
+  ]
+}
